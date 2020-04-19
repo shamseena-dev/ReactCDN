@@ -27,6 +27,11 @@
 			handleCopy(e){
 				console.log("dont copy!!")
 			}
+			handleChange = (e) => {
+				this.setState({
+					name: e.target.value
+				})
+			}
 			render(){
 				return(
 					<div className="app-content">
@@ -35,7 +40,12 @@
 						<p> My name is {this.state.name} and age is {this.state.age} </p>
 						<button onClick={this.handleClick}>Click</button>
 						<button onMouseOver={this.handleMouseOver}> Hover </button>
-							<p onCopy={this.handleCopy}> DOnt copy this </p>
+						<p onCopy={this.handleCopy}> DOnt copy this </p>
+						<form>
+							<input type="text" onChange={this.handleChange} />
+							<button> Submit </button>
+						</form>
+
 					</div>
 				)
 			}
