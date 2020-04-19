@@ -15,12 +15,24 @@
 				name: "John",
 				age: 30
 			}
+			handleClick(e){
+				console.log(e.target)
+			}
+			handleMouseOver(e){
+				console.log(e.target.value)
+			}
+			handleCopy(e){
+				console.log("dont copy!!")
+			}
 			render(){
 				return(
 					<div className="app-content">
 						<h1>This is a sample project using REACT CDN</h1>
 						<p> { Math.floor(Math.random() *5)}</p>
 						<p> My name is {this.state.name} and age is {this.state.age} </p>
+						<button onClick={this.handleClick}>Click</button>
+						<button onMouseOver={this.handleMouseOver}> Hover </button>
+							<p onCopy={this.handleCopy}> DOnt copy this </p>
 					</div>
 				)
 			}
