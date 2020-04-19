@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -32,6 +33,9 @@
 					name: e.target.value
 				})
 			}
+			handleBtn =(e) =>{
+				console.log("works only if CLICKED on btn,doesnt  work if pressed ENTER")
+			}
 			render(){
 				return(
 					<div className="app-content">
@@ -43,7 +47,7 @@
 						<p onCopy={this.handleCopy}> DOnt copy this </p>
 						<form>
 							<input type="text" onChange={this.handleChange} />
-							<button> Submit </button>
+							<button onClick={this.handleBtn}> Submit </button>
 						</form>
 
 					</div>
